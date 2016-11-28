@@ -1,0 +1,2 @@
+# osmproject
+OpenStreetMap - Newbury Area
