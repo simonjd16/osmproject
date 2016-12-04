@@ -28,18 +28,18 @@ WHERE tags.key LIKE '%city'
 GROUP BY tags.value
 ORDER BY count DESC;
 ```
-Within the OSM extract there were 98 different city tag values presnet. I have included the top 10 results:
+Within the OSM extract there were 98 different city tag values present. I have included the top 10 results which have been edited for readability:
 ```sql
 value  count
-Reading  3285
-Newbury  274
-Basingstoke  121
-Tadley  16
-4  11
+Reading     3285
+Newbury     274
+Basingstoke 121
+Tadley      16
+4           11
 Shrivenham  10
-Wantage  9
-6  7
-10  6
-Didcot  6
+Wantage     9
+6           7
+10          6
+Didcot      6
 ```
 The above results show the most common city value to be used is Reading, this would be in line with expections as it is the largest town in the areas and encompasses the eastern portion of the bounding box I selected. The second most common value is Newbury which is my hometown but proportionally it is much smaller than Reading so I would expect nothing less than the count of value to be much smaller.
