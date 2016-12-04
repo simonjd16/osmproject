@@ -89,15 +89,15 @@ ORDER BY num DESC
 LIMIT 10;
 ```
 ```sql
-user                    num
-jpennycook	            50663
-Mark_S	            50056
-Eriks Zelenka	      46357
-ndm	                  40164
-The Maarssen Mapper	28903
-richardwest	            25815
-Kabads	            25563
-GordonFS	            21313
-Philip	            21091
-DanGregory	            18799
+user        num
+jpennycook        50663
+Mark_S            50056
+Eriks Zelenka           46357
+ndm         40164
+The Maarssen Mapper           28903
+richardwest       25815
+Kabads            25563
+GordonFS          21313
+Philip            21091
+DanGregory        18799
 ```
