@@ -113,8 +113,33 @@ FROM
 ```
 144
 
-# Additional Ideas
-
-##
-
 ## Additional Data Exploration
+
+Based on being a cyclst, I thought it would be interesting to see if I could investigate some cycling related information from the database I have created.
+
+### Number of bicycle stands in the map area
+
+```sql
+SELECT node_tags.value, COUNT(*) as num
+FROM node_tags 
+    JOIN (SELECT DISTINCT(id) FROM node_tags WHERE value='stands') i
+    ON node_tags.id=i.id
+WHERE node_tags.key='bicycle_parking'
+GROUP BY node_tags.value
+ORDER BY num DESC;
+```
+
+
+### Number of designated bicycle nodes in the map area
+
+```sql
+SELECT node_tags.value, COUNT(*) as num
+FROM node_tags 
+    JOIN (SELECT DISTINCT(id) FROM node_tags WHERE value='designated') i
+    ON node_tags.id=i.id
+WHERE node_tags.key='bicycle'
+GROUP BY node_tags.value
+ORDER BY num DESC;
+```
+
+
