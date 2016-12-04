@@ -128,7 +128,7 @@ WHERE node_tags.key='bicycle_parking'
 GROUP BY node_tags.value
 ORDER BY num DESC;
 ```
-
+24
 
 ### Number of designated bicycle nodes in the map area
 
@@ -141,5 +141,5 @@ WHERE node_tags.key='bicycle'
 GROUP BY node_tags.value
 ORDER BY num DESC;
 ```
-
+23
 
