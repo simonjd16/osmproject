@@ -47,7 +47,7 @@ The above results show the most common city value to be used is Reading, this wo
 ##Data Overview and Additional Ideas
 
 ###File Sizes
-
+```
 Newbury Area OSM 31102016.osm .. 117 MB
 OSM Project.db ................. 63.4 MB
 nodes.csv ...................... 42.6 MB
@@ -55,7 +55,7 @@ nodes_tags.csv ................. 2.23 MB
 ways.csv ....................... 4.05 MB
 ways_tags.csv .................. 7.64 MB
 ways_nodes.cv .................. 15.3 MB  
-
+```
 ### Number of Nodes
 
 ```sql
@@ -90,14 +90,14 @@ LIMIT 10;
 ```
 ```sql
 user        num
-jpennycook        50663
-Mark_S            50056
-Eriks Zelenka           46357
-ndm         40164
-The Maarssen Mapper           28903
-richardwest       25815
-Kabads            25563
-GordonFS          21313
-Philip            21091
-DanGregory        18799
+jpennycook  50663
+Mark_S      50056
+Eriks Zelenka     46357
+ndm   40164
+The Maarssen Mapper     28903
+richardwest 25815
+Kabads      25563
+GordonFS    21313
+Philip      21091
+DanGregory  18799
 ```
