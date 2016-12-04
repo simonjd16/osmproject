@@ -101,3 +101,18 @@ GordonFS                21313
 Philip                  21091
 DanGregory              18799
 ```
+
+### Number of users appearing only once (having 1 post)
+```sql
+SELECT COUNT(*) 
+FROM
+    (SELECT e.user, COUNT(*) as num
+     FROM (SELECT user FROM node UNION ALL SELECT user FROM way) e
+     GROUP BY e.user
+     HAVING num=1)  u;
+```
+144
+
+# Additional Ideas
+
+##
