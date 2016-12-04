@@ -125,17 +125,17 @@ LIMIT 10;
 ```
 
 ```sql
-value       num
-post_box	      521
-bench	            461
-pub	            235
-telephone	      172
-place_of_worship	160
-parking	      125
-bicycle_parking	97
-post_office	      66
-shop	            66
-emergency_phone	64
+value             num
+post_box          521
+bench             461
+pub               235
+telephone         172
+place_of_worship  160
+parking           125
+bicycle_parking   97
+post_office       66
+shop              66
+emergency_phone   64
 ```
 ## Additional Data Exploration
 
