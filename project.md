@@ -90,8 +90,8 @@ LIMIT 10;
 ```
 ```sql
 user        num
-jpennycook  50663
-Mark_S      50056
+jpennycook              50663
+Mark_S                  50056
 Eriks Zelenka     46357
 ndm   40164
 The Maarssen Mapper     28903
