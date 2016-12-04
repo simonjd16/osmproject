@@ -137,6 +137,36 @@ post_office       66
 shop              66
 emergency_phone   64
 ```
+
+###
+```sql
+SELECT node_tags.value, COUNT(*) as num
+FROM node_tags 
+    JOIN (SELECT DISTINCT(id) FROM node_tags WHERE value='restaurant') i
+    ON node_tags.id=i.id
+WHERE node_tags.key='cuisine'
+GROUP BY node_tags.value
+ORDER BY num DESC;
+```
+```sql
+value             num
+indian            10
+chinese           6
+pizza             4
+burger            2
+italian           2
+thai              2
+asian             1
+fish_and_chips    1
+french            1
+international     1
+pasta;pizza       1
+portuguese        1
+regional          1
+spanish           1
+steak_house       1
+```
+
 ## Additional Data Exploration
 
 Based on being a cyclst, I thought it would be interesting to see if I could investigate some cycling related information from the database I have created.
