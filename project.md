@@ -89,7 +89,7 @@ ORDER BY num DESC
 LIMIT 10;
 ```
 ```sql
-user        num
+user                    num
 jpennycook              50663
 Mark_S                  50056
 Eriks Zelenka           46357
