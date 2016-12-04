@@ -113,6 +113,30 @@ FROM
 ```
 144
 
+### Top 10 appearing amenities
+
+```sql
+SELECT value, COUNT(*) as num
+FROM node_tags
+WHERE key='amenity'
+GROUP BY value
+ORDER BY num DESC
+LIMIT 10;
+```
+
+```sql
+value       num
+post_box	      521
+bench	            461
+pub	            235
+telephone	      172
+place_of_worship	160
+parking	      125
+bicycle_parking	97
+post_office	      66
+shop	            66
+emergency_phone	64
+```
 ## Additional Data Exploration
 
 Based on being a cyclst, I thought it would be interesting to see if I could investigate some cycling related information from the database I have created.
