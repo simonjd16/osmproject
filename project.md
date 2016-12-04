@@ -45,3 +45,59 @@ Didcot      6
 The above results show the most common city value to be used is Reading, this would be in line with expections as it is the largest town in the areas and encompasses the eastern portion of the bounding box I selected. The second most common value is Newbury which is my hometown but proportionally it is much smaller than Reading so I would expect nothing less than the count of value to be much smaller.
 
 ##Data Overview and Additional Ideas
+
+###File Sizes
+
+Newbury Area OSM 31102016.osm .. 117 MB
+OSM Project.db ................. 63.4 MB
+nodes.csv ...................... 42.6 MB
+nodes_tags.csv ................. 2.23 MB
+ways.csv ....................... 4.05 MB
+ways_tags.csv .................. 7.64 MB
+ways_nodes.cv .................. 15.3 MB  
+
+### Number of Nodes
+
+```sql
+SELECT COUNT(*) FROM node;
+```
+542,652
+
+### Number of Ways
+
+```slq
+SELECT COUNT(*) FROM way;
+```
+
+71,444
+
+### Number of Unique Users
+
+```sql
+SELECT COUNT(DISTINCT(e.uid))          
+FROM (SELECT uid FROM node UNION ALL SELECT uid FROM way) e;
+```
+
+891
+
+### Top 10 Contributing Users
+```sql
+SELECT e.user, COUNT(*) as num
+FROM (SELECT user FROM node UNION ALL SELECT user FROM way) e
+GROUP BY e.user
+ORDER BY num DESC
+LIMIT 10;
+```
+```sql
+user  num
+jpennycook	            50663
+Mark_S	            50056
+Eriks Zelenka	      46357
+ndm	                  40164
+The Maarssen Mapper	28903
+richardwest	            25815
+Kabads	            25563
+GordonFS	            21313
+Philip	            21091
+DanGregory	            18799
+```
