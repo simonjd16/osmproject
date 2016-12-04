@@ -92,8 +92,8 @@ LIMIT 10;
 user        num
 jpennycook              50663
 Mark_S                  50056
-Eriks Zelenka     46357
-ndm   40164
+Eriks Zelenka           46357
+ndm                     40164
 The Maarssen Mapper     28903
 richardwest 25815
 Kabads      25563
