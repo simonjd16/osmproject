@@ -10,16 +10,16 @@ I decided to use a custom bounding box as there was not a metro export available
 - max Longitude: -0.9462
 - max Latitude: 51.5702
 
-The area I chose contained the area surrounding my hometown. I am a keen cyclyst that uses the OpenStreetMap data to not only plan my cycling routes before a ride but also use them for mapping on my Garmin cycling computer while out on a ride. Having the opportunity to improve the local mapping would not only benefit the community but also my route planning and navigation at the same time.
+The area I chose contained the area surrounding my hometown. I am a keen cyclist that uses the OpenStreetMap data to not only plan my cycling routes before a ride but also use them for mapping on my Garmin cycling computer while out on a ride. Having the opportunity to improve the local mapping would not only benefit the community but also my route planning and navigation at the same time.
 
 ## Problems Encountered in the Map
 
-Having downloaded a sufficient data set to cover the area around Newbury I was pleasently suprised to find the data was of a much higher quality than I expected. After auditing the data the main problem I encountered was overabbreviated street names.
+Having downloaded a sufficient data set to cover the area around Newbury I was pleasantly surprised to find the data was of a much higher quality than I expected. After auditing the data the main problem I encountered was over abbreviated street names.
 
 To rectify this problem took 2 approaches.
 
 ### 1. Adding to Expected list
-After reviewing the list of exceptions beyond the intial list used in earlier lessons, I was able to add multiple values to the expected list. As the area sounding my home town contains numerous small villages, very unique road/steeet names exist such as "Rookery", "Glebe" and "Rise" so these were added to the expected list.
+After reviewing the list of exceptions beyond the initial list used in earlier lessons, I was able to add multiple values to the expected list. As the area sounding my home town contains numerous small villages, unique road/street names exist such as "Rookery", "Glebe" and "Rise" so these were added to the expected list.
 ```python
 expected = ["Street", "Avenue", "Boulevard", "Drive", "Court", "Place", "Square", "Lane", "Road", 
             "Trail", "Parkway", "Commons", "Close", "Gardens", "Hill", "Way", "Park", "Centre", 
@@ -30,7 +30,7 @@ expected = ["Street", "Avenue", "Boulevard", "Drive", "Court", "Place", "Square"
 ```
 
 ### 2. Create a mapping for exceptions
-Beyond adding to the expected values, any exceptions to this were added via a mapping table. These predominantly revolved around road, street and avenue over abbreviations
+Beyond adding to the expected values, any exceptions to this were added via a mapping table. These predominantly revolved around road, street, and avenue over abbreviations
 ```python
 mapping = { 
             "Rd" : "Road",
@@ -68,7 +68,7 @@ Wantage     9
 10          6
 Didcot      6
 ```
-The above results show the most common city value used is Reading, this would be in line with expections as it is the largest town within my bounding box. It encompasses the eastern portion of the bounding box I selected. The second most common value is Newbury which is my hometown. It is proportionally much smaller than Reading so I would expect nothing less than the count of value to be much smaller. 
+The above results show the most common city value used is Reading, this would be in line with expectations as it is the largest town within my bounding box. It encompasses the eastern portion of the bounding box I selected. The second most common value is Newbury which is my hometown. It is proportionally much smaller than Reading so I would expect nothing less than the count of value to be much smaller. 
 
 ##Data Overview and Additional Ideas
 
@@ -194,7 +194,7 @@ steak_house       1
 
 ## Additional Data Exploration
 
-Based on being a cyclst, I thought it would be interesting to see if I could investigate some cycling related information from the database I have created.
+Based on being a cyclist, I thought it would be interesting to see if I could investigate some cycling related information from the database I have created.
 
 ### Number of bicycle stands in the map area
 
@@ -223,4 +223,4 @@ ORDER BY num DESC;
 23
 
 #Conclusion
-After reviewing the area surronding my home town of Newbury, I believe the OpenStreetMap data is far more complete than I first expected. The level of detail the data offers offer allows me to drill down to a very low level, taking the number of bicycle stands as an example. Once the data had been audited and fixed from a street/road perspective, I would be confident to use the data on my GPS device and not being overly concerned that there would be any large errors that could cause me a problem. While reviewing the top 10 contributing users its clear that there are a lots of very active users contributing to quality of the data in my local area. Everyone of the top 10 users have made over 10,000 contributions. While the data cleaning I have completed can contribute to quality of the data, I think it would be a long time till I could become a top contributor. With that in mind programitically contributing would be a good start to contribute to my local areas data.
+After reviewing the area surrounding my home town of Newbury, I believe the OpenStreetMap data is far more complete than I first expected. The level of detail the data offers offer allows me to drill down to a very low level, taking the number of bicycle stands as an example. Once the data had been audited and fixed from a street/road perspective, I would be confident to use the data on my GPS device and not being overly concerned that there would be any large errors that could cause me a problem. While reviewing the top 10 contributing users it's clear that there are a lots of very active users contributing to quality of the data in my local area. Every one of the top 10 users have made over 10,000 contributions. While the data cleaning I have completed can contribute to quality of the data, I think it would be a long time till I could become a top contributor. With that in mind programmatically contributing would be a good start to contribute to my local areas data.
