@@ -68,7 +68,7 @@ Wantage     9
 10          6
 Didcot      6
 ```
-The above results show the most common city value to be used is Reading, this would be in line with expections as it is the largest town in the areas and encompasses the eastern portion of the bounding box I selected. The second most common value is Newbury which is my hometown but proportionally it is much smaller than Reading so I would expect nothing less than the count of value to be much smaller.
+The above results show the most common city value used is Reading, this would be in line with expections as it is the largest town within my bounding box. It encompasses the eastern portion of the bounding box I selected. The second most common value is Newbury which is my hometown. It is proportionally much smaller than Reading so I would expect nothing less than the count of value to be much smaller. 
 
 ##Data Overview and Additional Ideas
 
@@ -222,4 +222,6 @@ GROUP BY node_tags.value
 ORDER BY num DESC;
 ```
 23
+
+#Conclusion
 
