@@ -167,8 +167,7 @@ emergency_phone   64
 ###
 ```sql
 SELECT node_tags.value, COUNT(*) as num
-FROM node_tags 
-    JOIN (SELECT DISTINCT(id) FROM node_tags WHERE value='restaurant') i
+FROM node_tags     JOIN (SELECT DISTINCT(id) FROM node_tags WHERE value='restaurant') i
     ON node_tags.id=i.id
 WHERE node_tags.key='cuisine'
 GROUP BY node_tags.value
@@ -224,4 +223,4 @@ ORDER BY num DESC;
 23
 
 #Conclusion
-
+After reviewing the area surronding my home town of Newbury, I believe the OpenStreetMap data is far more complete than I first expected. The level of detail the data offers offer allows me to drill down to a very low level, taking the number of bicycle stands as an example. Once the data had been audited and fixed from a street/road perspective, I would be confident to use the data on my GPS device and not being overly concerned that there would be any large errors that could cause me a problem. While reviewing the top 10 contributing users its clear that there are a lots of very active users contributing to quality of the data in my local area. Everyone of the top 10 users have made over 10,000 contributions. While the data cleaning I have completed can contribute to quality of the data, I think it would be a long time till I could become a top contributor. With that in mind programitically contributing would be a good start to contribute to my local areas data.
