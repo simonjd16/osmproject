@@ -164,7 +164,7 @@ shop              66
 emergency_phone   64
 ```
 
-###
+### Top restaurant cuisines in the area
 ```sql
 SELECT node_tags.value, COUNT(*) as num
 FROM node_tags     JOIN (SELECT DISTINCT(id) FROM node_tags WHERE value='restaurant') i
