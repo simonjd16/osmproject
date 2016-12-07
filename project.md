@@ -14,9 +14,35 @@ The area I chose contained the area surrounding my hometown. I am a keen cyclyst
 
 ## Problems Encountered in the Map
 
-Having downloaded a sufficient data set to cover the area around Newbury
+Having downloaded a sufficient data set to cover the area around Newbury I was pleasently suprised to find the data was of a much higher quality than I expected. After auditing the data the main problem I encountered was overabbreviated street names.
 
+To rectify this problem took 2 approaches.
 
+### 1. Adding to Expected list
+After reviewing the list of exceptions beyond the intial list used in earlier lessons, I was able to add multiple values to the expected list. As the area sounding my home town contains numerous small villages, very unique road/steeet names exist such as "Rookery", "Glebe" and "Rise" so these were added to the expected list.
+```python
+expected = ["Street", "Avenue", "Boulevard", "Drive", "Court", "Place", "Square", "Lane", "Road", 
+            "Trail", "Parkway", "Commons", "Close", "Gardens", "Hill", "Way", "Park", "Centre", 
+            "Common", "Crescent", "Fields", "Roundabout", "Row", "Ride", "View", "Walk",
+            "Broadway", "Down", "End", "Grove", "Cornfields", "Eastcourt", "Green", "Link",
+            "Mill", "Newfound", "A339", "Fosbury", "Glebe", "Hailey", "Rookery", "Smithy", "Parade",
+            "Arcade", "Estate", "Mall", "Rise", "Horse", "West", "Mead"]
+```
+
+### 2. Create a mapping for exceptions
+Beyond adding to the expected values, any exceptions to this were added via a mapping table. These predominantly revolved around road, street and avenue over abbreviations
+```python
+mapping = { 
+            "Rd" : "Road",
+            "Road," : "Road",
+            "Steet" : "Street",
+            "Rd'" : "Road",
+            "Road," : "Road",
+            "Steet" : "Street",
+            "Ave" : "Avenue",
+            "Sr" : "Street"
+            }  
+```
 
 ## Sort cities by count, descending
 
