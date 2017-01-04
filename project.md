@@ -254,8 +254,8 @@ ORDER BY num DESC;
 
 
 ###Benefits
-1. Bullet 1
-2. Bullet 2
+1. Owning the data: By implementing our fixes we are taking ownership of insuring the data is correct and also auditing other users updates/additions. 
+2. Frequency of updates/improvements: When we implement our data improvements we can also govern the frequeny at which these are made. If we were a regualar contributor we could insure that our local area stays up to date in so far as improving the data that other users add.
 
 
 ###Anticipated Problems
