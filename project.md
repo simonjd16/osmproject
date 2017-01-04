@@ -250,14 +250,15 @@ ORDER BY num DESC;
 ```
 23
 
-#Benefits and Anticpated Problems with implementing the data improvements
+##Benefits and Anticpated Problems with implementing the data improvements
 
-##Benefits
+
+###Benefits
 1. Bullet 1
 2. Bullet 2
 
 
-##Anticipated Problems
+###Anticipated Problems
 1. Bullet 1
 2. Bullet 2
 
