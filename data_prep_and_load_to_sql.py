@@ -18,6 +18,12 @@ LOWER_COLON = re.compile(r'^([a-z]|_)+:([a-z]|_)+')
 PROBLEMCHARS = re.compile(r'[=\+/&<>;\'"\?%#$@\,\. \t\r\n]')
 POSTCODE = re.compile(r'[A-z]\d[A-z]\s?\d[A-z]\d')
 
+city_check_re = re.compile(r'\b\S+\.?$', re.IGNORECASE)
+street_type_re = re.compile(r'\b\S+\.?$', re.IGNORECASE)
+num_line_street_re = re.compile(r'\d0?(st|nd|rd|th|)\s(Line)$', re.IGNORECASE) # Spelling out numbers in streets rather than using numbers
+nth_re = re.compile(r'\d\d?(st|nd|rd|th|)', re.IGNORECASE)
+nesw_re = re.compile(r'\s(North|East|South|West)$')
+
 SCHEMA = schema
 
 # Make sure the fields order in the csvs matches the column order in the sql table schema
@@ -103,7 +109,6 @@ def audit_cityvalues(OSMFILE):
     osm_file.close
     return city_values
 
-
 def load_new_tag(element, secondary, default_tag_type):
 ## Load a new tag dict to go into the list of dicts for way_tags, node_tags ##
     new = {}
@@ -115,8 +120,7 @@ def load_new_tag(element, secondary, default_tag_type):
         post_colon = secondary.attrib['k'].index(":") + 1
         new['key'] = secondary.attrib['k'][post_colon:]
         new['type'] = secondary.attrib['k'][:post_colon - 1]
-
-    ## Cleaning and loading values of various keys for both street names and cities
+ ## Cleaning and loading values of various keys for both street names and cities
     if is_street_name(secondary):
         street_name = update_name(secondary.attrib['v'])
         new['value'] = street_name
@@ -130,7 +134,7 @@ def load_new_tag(element, secondary, default_tag_type):
 
 def shape_element(element, node_attr_fields=NODE_FIELDS, way_attr_fields=WAY_FIELDS,
                   problem_chars=PROBLEMCHARS, default_tag_type='regular'):
-    """Clean and shape node or way XML element to Python dict"""
+##Clean and shape node or way XML element to Python dict##
 
     node_attribs = {}
     way_attribs = {}
@@ -142,7 +146,7 @@ def shape_element(element, node_attr_fields=NODE_FIELDS, way_attr_fields=WAY_FIE
             if attrib in node_attr_fields:
                 node_attribs[attrib] = value
         
-        # For elements within the top element
+        ## For elements within the top element
         for secondary in element.iter():
             if secondary.tag == 'tag':
                 if problem_chars.match(secondary.attrib['k']) is not None:
