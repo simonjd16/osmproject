@@ -14,8 +14,8 @@ cities_expected = ["Aldermaston", "Andover", "Ash", "Avington", "Basildon", "Bas
                    "Mapledurham", "Marlborough", "Midgham", "Mortimer", "Newbury", "Norreys", "Overton", "Pangbourne", 
                    "Shinfield", "Streatley-On-Thames", "Swindon", "Theale", "Common", "Hill", "Row", "Tadley"
                   ]
-## I have added a small number of mappings to correct a small number of values including some that had multiple cities present in the same field ##
 
+## I have added a small number of mappings to correct a small number of values including some that had multiple cities present in the same field ##
 city_mapping = { 
             "READING" : "Reading",
             "THATCHAM" : "Thatcham",
@@ -55,8 +55,8 @@ def update_cities(name, mapping):
     return name
 
 
-## The second area I chose to audit was the street names in the OSM data ##
-
+## The second area I chose to audit was the street names in the OSM data. ##
+## This is the area I expected to find more the most issues with due to the nature of the variation in street names ##
 street_type_re = re.compile(r'\b\S+\.?$', re.IGNORECASE)
 num_line_street_re = re.compile(r'\d0?(st|nd|rd|th|)\s(Line)$', re.IGNORECASE) # Spelling out numbers in streets rather than using numbers
 nth_re = re.compile(r'\d\d?(st|nd|rd|th|)', re.IGNORECASE)
