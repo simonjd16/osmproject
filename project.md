@@ -53,8 +53,9 @@ After auditing the cities, I added the below values to the cities_expected list.
 cities_expected = ["Aldermaston", "Andover", "Ash", "Avington", "Basildon", "Basingstoke", "Bedwyn",
                    "Bradfield", "Bramley", "Caversham", "Chaddleworth", "Checkendon", "Curridge", "Goring", 
                    "Hook", "Hungerford", "Ilsley", "Inkpen", "Ipsden", "Kingsclere", "Kintbury", 
-                   "Mapledurham", "Marlborough", "Midgham", "Mortimer", "Newbury", "Norreys", "Overton", "Pangbourne", 
-                   "Shinfield", "Streatley-On-Thames", "Swindon", "Theale", "Common", "Hill", "Row", "Tadley"
+                   "Mapledurham", "Marlborough", "Midgham", "Mortimer", "Newbury", "Norreys", "Overton",
+                   "Pangbourne", "Shinfield", "Streatley-On-Thames", "Swindon", "Theale", "Common",
+                   "Hill", "Row", "Tadley"
                    ]                
 ```
 
