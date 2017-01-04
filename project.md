@@ -255,12 +255,13 @@ ORDER BY num DESC;
 
 ###Benefits
 1. Owning the data: By implementing our fixes we are taking ownership of insuring the data is correct and also auditing other users updates/additions. 
-2. Frequency of updates/improvements: When we implement our data improvements we can also govern the frequeny at which these are made. If we were a regualar contributor we could insure that our local area stays up to date in so far as improving the data that other users add.
+2. Frequency of updates/improvements: When we implement our data improvements we can also govern the frequency at which these are made. If we were a regular contributor we could insure that our local area stays up to date as far as improving the data that other users add.
+3. Improvements to freely available data: As I am a cyclist, having access to free correct data would benefit me personally for use of my GPS cycling computer. Having the ability to download would not only benefit me but other cyclists in the area who also use the Open Street Map Data.
 
 
 ###Anticipated Problems
-1. Bullet 1
-2. Bullet 2
+1. Incorrect fixes: While improving the data is a great initiative, my opinion on an improvement might actually end up degrading the data. One person's judgement on possible incorrect data could actually turn out to be a incorrect fix. I suppose, to alleviate this problem, restricting the working area for imrovements to the immediate local area would reduce the risk of incorrect fixes being applied by using local knowledge.
+2. Coding errors: While working with large volumes of data there is always the risk that incorrect code could inadvertently introduce problems into the data that had not already existed. An example of this would be replacing short character strings, if a too loose replace is performed it could update valid data to incorrect data very easily. To rectify this, it would be in the best interest to have all fixes validated or cross checked by another user before anything went live.
 
 #Conclusion
 After reviewing the area surrounding my home town of Newbury, I believe the OpenStreetMap data is far more complete than I first expected. The level of detail the data offers offer allows me to drill down to a very low level, taking the number of bicycle stands as an example. Once the data had been audited and fixed from a street/road perspective, I would be confident to use the data on my GPS device and not being overly concerned that there would be any large errors that could cause me a problem. While reviewing the top 10 contributing users it's clear that there are a lots of very active users contributing to quality of the data in my local area. Every one of the top 10 users have made over 10,000 contributions. While the data cleaning I have completed can contribute to quality of the data, I think it would be a long time till I could become a top contributor. With that in mind programmatically contributing would be a good start to contribute to my local areas data.
