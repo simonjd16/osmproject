@@ -14,11 +14,9 @@ The area I chose contained the area surrounding my hometown. I am a keen cyclist
 
 ## Problems Encountered in the Map
 
-Having downloaded a sufficient data set to cover the area around Newbury I was pleasantly surprised to find the data was of a much higher quality than I expected. After auditing the data the main problem I encountered was over abbreviated street names.
+Having downloaded a sufficient data set to cover the area around Newbury I was pleasantly surprised to find the data was of a much higher quality than I expected. During the audit I chose to focus on auditing and cleaning the cities and steet names. While auditing the cities and street names I was able to generate an expected list and also a mapping list to clean and incorrect or over abbreviated values
 
-To rectify this problem took 2 approaches.
-
-### 1. Adding to Expected list
+### Adding to expected steet names list
 After reviewing the list of exceptions beyond the initial list used in earlier lessons, I was able to add multiple values to the expected list. As the area sounding my home town contains numerous small villages, unique road/street names exist such as "Rookery", "Glebe" and "Rise" so these were added to the expected list.
 ```python
 expected = ["Street", "Avenue", "Boulevard", "Drive", "Court", "Place", "Square", "Lane", "Road", 
@@ -26,22 +24,51 @@ expected = ["Street", "Avenue", "Boulevard", "Drive", "Court", "Place", "Square"
             "Common", "Crescent", "Fields", "Roundabout", "Row", "Ride", "View", "Walk",
             "Broadway", "Down", "End", "Grove", "Cornfields", "Eastcourt", "Green", "Link",
             "Mill", "Newfound", "A339", "Fosbury", "Glebe", "Hailey", "Rookery", "Smithy", "Parade",
-            "Arcade", "Estate", "Mall", "Rise", "Horse", "West", "Mead"]
+            "Arcade", "Estate", "Mall", "Rise", "Horse", "West", "Mead", "Approach", "Ashbury", "Brow",
+            "Butts", "By-pass", "Chase", "Cottages", "Forbury", "Forest", "Gate", "Heath", "Lea",
+            "Market", "Mews", "Oracle", "Pleasant", "Queensway", "Saye", "Terrace", "Tilehurst", "Limes"
+            ]
 ```
 
-### 2. Create a mapping for exceptions
-Beyond adding to the expected values, any exceptions to this were added via a mapping table. These predominantly revolved around road, street, and avenue over abbreviations
+### Creation of a mapping for steet name exceptions
+Beyond adding to the expected values, any exceptions to this were added via a mapping table. These predominantly revolved around road, street, and avenue over abbreviations. The was one completely incorrect value of "www.cpva.org.uk" which I have updated to "Unknown" in the mappings below
 ```python
 mapping = { 
             "Rd" : "Road",
+            "Rd," : "Road",
             "Road," : "Road",
             "Steet" : "Street",
-            "Rd'" : "Road",
             "Road," : "Road",
             "Steet" : "Street",
             "Ave" : "Avenue",
-            "Sr" : "Street"
-            }  
+            "Sr" : "Street",
+            "street" : "Street",
+            "www.cpva.org.uk" : "Unknown"
+            }
+```
+
+### Adding to expected cities list
+After auditing the cities, I added the below values to the cities_expected list.
+```python
+cities_expected = ["Aldermaston", "Andover", "Ash", "Avington", "Basildon", "Basingstoke", "Bedwyn",
+                   "Bradfield", "Bramley", "Caversham", "Chaddleworth", "Checkendon", "Curridge", "Goring", 
+                   "Hook", "Hungerford", "Ilsley", "Inkpen", "Ipsden", "Kingsclere", "Kintbury", 
+                   "Mapledurham", "Marlborough", "Midgham", "Mortimer", "Newbury", "Norreys", "Overton", "Pangbourne", 
+                   "Shinfield", "Streatley-On-Thames", "Swindon", "Theale", "Common", "Hill", "Row", "Tadley"
+                   ]                
+```
+
+### Creation of a mapping for city exceptions
+There were very few incorrect values within the cities, there were a few values that needed to be corrected. I also noticed 4 instances where there were more than one one city value present. In those cases I corrected these to the best of my knowledge.
+```python
+city_mapping = { 
+            "READING" : "Reading",
+            "THATCHAM" : "Thatcham",
+            "Rotherfield Greys / Henley-on-Thames" : "Henley-on-Thames",
+            "Caversham, Reading" : "Reading",
+            "Lower Basildon, Reading" : "Reading",
+            "Pangbourne, Reading" : "Reading"
+            } 
 ```
 
 ## Sort cities by count, descending
