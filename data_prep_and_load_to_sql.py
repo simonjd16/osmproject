@@ -38,18 +38,48 @@ expected = ["Street", "Avenue", "Boulevard", "Drive", "Court", "Place", "Square"
             "Common", "Crescent", "Fields", "Roundabout", "Row", "Ride", "View", "Walk",
             "Broadway", "Down", "End", "Grove", "Cornfields", "Eastcourt", "Green", "Link",
             "Mill", "Newfound", "A339", "Fosbury", "Glebe", "Hailey", "Rookery", "Smithy", "Parade",
-            "Arcade", "Estate", "Mall", "Rise", "Horse", "West", "Mead"]
+            "Arcade", "Estate", "Mall", "Rise", "Horse", "West", "Mead", "Approach", "Ashbury", "Brow",
+            "Butts", "By-pass", "Chase", "Cottages", "Forbury", "Forest", "Gate", "Heath", "Lea",
+            "Market", "Mews", "Oracle", "Pleasant", "Queensway", "Saye", "Terrace", "Tilehurst", "Limes"]
 
 mapping = { 
             "Rd" : "Road",
+            "Rd," : "Road",
             "Road," : "Road",
             "Steet" : "Street",
-            "Rd'" : "Road",
             "Road," : "Road",
             "Steet" : "Street",
             "Ave" : "Avenue",
-            "Sr" : "Street"
+            "Sr" : "Street",
+            "street" : "Street",
+            "www.cpva.org.uk" : "Unknown"
             }  
+
+street_mapping = { 
+            "Rd" : "Road",
+            "Rd," : "Road",
+            "Road," : "Road",
+            "Steet" : "Street",
+            "Road," : "Road",
+            "Steet" : "Street",
+            "Ave" : "Avenue",
+            "Sr" : "Street",
+            "street" : "Street",
+            "www.cpva.org.uk" : "Unknown"
+            }  
+
+num_line_mapping = {
+                     "1st": "First",
+                     "2nd": "Second",
+                     "3rd": "Third",
+                     "4th": "Fourth",
+                     "5th": "Fifth",
+                     "6th": "Sixth",
+                     "7th": "Seventh",
+                     "8th": "Eighth",
+                     "9th": "Ninth",
+                     "10th": "Tenth"
+                   }
 
 cities_expected = ["Aldermaston", "Andover", "Ash", "Avington", "Basildon", "Basingstoke", "Bedwyn",
                    "Bradfield", "Bramley", "Caversham", "Chaddleworth", "Checkendon", "Curridge", "Goring", 
